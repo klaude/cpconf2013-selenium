@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  # config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210.box"
+  config.vm.box_url = "https://www.dropbox.com/s/w84ts3sj4odtlef/fedora-cpconf.box"
 
   config.vm.hostname = "selenium.cpconf13.whmcs"
 

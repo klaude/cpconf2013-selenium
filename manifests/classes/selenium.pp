@@ -21,16 +21,24 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub',
 		ensure => latest,
 	}
 
-    package{ 'libstdc++':
+    package { 'libstdc++':
     	ensure => latest,
     }
 
-    package{'redhat-lsb':
+    package { 'redhat-lsb':
         ensure => latest,
     }
 
-    package{'firefox':
+    package { 'firefox':
         ensure => latest,
+    }
+
+    package { 'xscreensaver-base':
+    	ensure => absent,
+    }
+
+    package { 'xscreensaver-extras':
+    	ensure => absent,
     }
 
     file { '/home/vagrant/bin/':
