@@ -1,9 +1,11 @@
 #
 import "classes/*.pp"
 
-# should remain blank #
 node default {
+	include common-packages
 	include selenium	
 	include php-testing
 	include perl-testing
+	include tests-source
+	include testing-pages
 }
