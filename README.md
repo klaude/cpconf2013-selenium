@@ -30,3 +30,20 @@ To login to the machine via a SSH connection.
 Website code resides in /var/www/html. 
 
 Test code resides in /home/vagrant/src/cpconf-2013-tests
+
+
+Code Used
+============================================
+
+Aristo jQuery UI Example Page:
+
+https://github.com/taitems/Aristo-jQuery-UI-Theme
+
+Selenium::Remote::Driver:
+
+http://search.cpan.org/~aivaturi/Selenium-Remote-Driver/
+
+php-webdriver (Facebook's PHP WebDriver bindings):
+
+https://github.com/facebook/php-webdriver/
+
