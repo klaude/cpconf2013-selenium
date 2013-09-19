@@ -6,7 +6,7 @@ class testing-pages {
 		group => 'vagrant',
         recurse => true,
         links => manage,
-        source => '/vagrant/files/html/',
+        source => '/vagrant/files/www/',
         require => Package['httpd']
     }
 
