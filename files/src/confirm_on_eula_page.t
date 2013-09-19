@@ -15,3 +15,4 @@ my $title = $driver->find_element('html/body/h1', 'xpath')->get_text();
 
 is($title, 'End User License Agreement', 'Confirm the page title is displayed correctly.');
 
+$driver->quit();

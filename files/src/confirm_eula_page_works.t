@@ -34,3 +34,4 @@ my $confirm_header = $driver->find_element('html/body/h1', 'xpath')->get_text();
 is($confirm_header, 'Thanks for agreeing', 'Confirm the accept page header is displayed correctly.');
 ok($driver->find_element('disclaimer', 'id')->is_displayed, 'Confirm the disclaimer is shown on agree page.');
 
+$driver->quit();
