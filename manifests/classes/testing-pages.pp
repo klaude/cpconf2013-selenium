@@ -1,14 +1,11 @@
 class testing-pages {
 
-	file { '/var/www/html/':
-		ensure => directory,
-		owner => 'vagrant',
-		group => 'vagrant',
-        recurse => true,
-        links => manage,
-        source => '/vagrant/files/www/',
-        require => Package['httpd']
-    }
+	 exec {'install_test_pages':
+		command => 'rsync -ap /vagrant/files/www /var/; chown -R apache. /var/www/html; setenforce 0',
+		path    => '/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:/usr/local/sbin',
+		cwd     => '/usr/local/bin',
+		require => Package['httpd'],
+	}
 
     package { 'httpd':
     	ensure => latest,
@@ -19,6 +16,6 @@ class testing-pages {
         enable     => true,
         hasrestart => true,
         hasstatus  => true,
-        require    => Package['httpd']
+        require    => [ Package['httpd'], Exec['install_test_pages'] ]
     }
 }
